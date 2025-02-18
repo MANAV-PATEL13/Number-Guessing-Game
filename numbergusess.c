@@ -33,17 +33,20 @@ int main() {
         print_banner();
         print_rules();
 
+
         do {
             printf("\nEnter your guess: ");
             scanf("%d", &gs);
             a++;
 
             if (gs < n) {
-                printf("\033[0;31mToo low! Try again.\n\033[0m");
+
+                printf("Too low! Try again.\n");
             } else if (gs > n) {
-                printf("\033[0;31mToo high! Try again.\n\033[0m");
+                printf("Too high! Try again.\n");
             } else {
-                print_congratulations(a);
+                printf("Congratulations! You guessed the number in %d attempts.\n", a);
+
             }
         } while (gs != n);
        
@@ -51,7 +54,7 @@ int main() {
         scanf(" %c", &pa);
     } 
 
-    printf("\n\033[0;33mThank you for playing! Goodbye!\n\n\033[0m");
+    printf("\nThank you for playing! Goodbye!\n\n");
 
     return 0;
 }
